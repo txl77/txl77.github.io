@@ -1,0 +1,7 @@
+fetch("https://api.instagram.com/v1/users/self/?access_token=IGQVJWUmNfeTloNkxvbDFBWm9CLVBlYXdSTURKSGdTb21ISHcxYzNqYW5XSUl4SjBvMGF5ajdSSzFManNLMTlmYkJNTUlmY2VLZAnRVTTkxTmNkLW1kbTZAIY1FTbTZA4VUNNRXZANM3BuTzYyckJiWXVybwZDZD")
+.then((response) => { return response.json();
+})
+.then((data) => { const counts = data.data.counts;
+const followers = counts.followed_by;
+console.log(`Number of followers: ${followers}`);
+})
